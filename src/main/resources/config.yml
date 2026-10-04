@@ -1,0 +1,51 @@
+# Points Plugin Configuration
+
+# Arena group that TrueSkill 2 tracking will apply to (case-sensitive)
+arena-group: "RBW"
+
+# Storage configuration
+storage:
+  file: "points.db"
+
+# TrueSkill 2 System Settings
+trueskill:
+  default-mu: 25.0
+  default-sigma: 8.333333333333334
+  # Rating multiplier to turn conservative rating into integer display points (R = mu - 3 * sigma)
+  display-scale: 40.0
+
+# Rating Decay System
+decay:
+  enabled: true
+  # How many days of inactivity before they start losing points
+  days-inactive: 7
+  # How many points they lose per day after passing the inactive threshold
+  points-per-day: 10
+  # The lowest point value decay can drop them to
+  minimum-points: 0
+
+# Rank System
+# A player needs ALL THREE requirements to hold a rank: the percentile cut-off
+# (hardcoded in PointsManager), the amount of games inside the rolling window,
+# and the elo floor mirrored from the rbw-hook plugin.
+ranks:
+  # Rolling window, in days, used for the "games played" requirement
+  window-days: 30
+  # Seconds to wait after a ranked game ends before the progress report is sent
+  progress-delay-seconds: 5
+  premium:
+    min-games: 60
+    min-elo: 1600
+  pugs:
+    min-games: 45
+    min-elo: 1300
+  pups:
+    min-games: 25
+    min-elo: 1000
+
+# Ranks and placeholders are computed live from in-memory ratings, so no
+# periodic refresh is needed. Ratings are also persisted to the database
+# immediately after every match.
+
+# Debug logging
+debug: false

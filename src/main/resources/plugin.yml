@@ -1,0 +1,29 @@
+name: PPPPlugin
+version: 1.0.0
+main: me.obvgreen.ppp.PPPPlugin
+author: ObvGreen
+description: A TrueSkill 2 skill rating plugin for BedWars1058 RBW arenas
+depend: [BedWars1058]
+softdepend: [PlaceholderAPI]
+
+commands:
+  ppppoints:
+    description: View player TrueSkill rating, rank, or leaderboard
+    usage: /ppppoints [player] | /ppppoints top
+    permission: ppp.points
+    aliases: [pts, ppp]
+  pppreload:
+    description: Reload the plugin configuration and messages
+    usage: /pppreload
+    permission: ppp.admin
+
+permissions:
+  ppp.points:
+    description: Allow viewing own TrueSkill rating
+    default: true
+  ppp.points.others:
+    description: Allow viewing other players' TrueSkill rating
+    default: true
+  ppp.admin:
+    description: Administrative permissions for reloading the plugin
+    default: op

@@ -1,0 +1,40 @@
+# Points Plugin Messages
+
+prefix: "&a[TrueSkill] "
+
+# Command messages
+no-permission: "&cYou don't have permission to use this command."
+player-not-found: "&cPlayer not found: &e{player}"
+invalid-usage: "&cUsage: &e{usage}"
+
+# Rating command messages
+points-self: "&aYou have &e{points} &aTrueSkill rating."
+points-activity: "&7Games in the last {days} days: &e{games}&7/&e{required}"
+points-other: "&a{player} has &e{points} &aTrueSkill rating."
+points-top-header: "&6=== Top TrueSkill Players ==="
+points-top-format: "&e{rank}. &a{player}: &f{points}"
+points-top-format-role: "&e{rank}. &a{player}: &f{points} {role} &7- top {percentile}%"
+
+# Rank progress messages
+points-progress-header: "&7Rank progress &8» &r{role} &8({percent}%)"
+points-progress-total: "&7Overall: &e{percent}%"
+points-progress-requirement: "  {bar} &f{label} &8- &7{value} {status}"
+points-progress-maxed: "&aYou already hold the highest rank."
+progress-status-met: "&aDONE"
+progress-status-missing: "&cMISSING"
+
+# Point change notification messages
+points-earned-victory: "&a+{points} TrueSkill rating!"
+points-lost-game: "&c{points} TrueSkill rating!"
+
+# Rank change notification messages
+rank-promoted: "&bYou were promoted to {role}!"
+rank-demoted: "&cYou were demoted from {old_role} to {role}."
+
+# Reload messages
+reload-success: "&aConfiguration and TrueSkill database reloaded successfully!"
+reload-failed: "&cFailed to reload configuration."
+
+# General messages
+not-in-arena: "&cYou are not in a Bedwars arena."
+wrong-arena-group: "&cThis arena is not in the RBW group."
